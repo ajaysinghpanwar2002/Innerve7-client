@@ -122,7 +122,7 @@ function Hotels() {
                 {
                     loading ? <Loader /> : (
                         <div className="card-container">
-                            {Array.isArray(hotelsBigData) ? (hotelsBigData.map((i) => {
+                            {Array.isArray(hotelsBigData) && hotelsBigData.length > 0 ? (hotelsBigData.map((i) => {
                                 return (
                                     <HotelCard
                                         id={i.location_id}
