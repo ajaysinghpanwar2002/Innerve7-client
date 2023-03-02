@@ -16,7 +16,7 @@ function Payment() {
             payload[event.target[i].id] = (event.target[i].value)
         }
         console.log(payload);
-        axios.post("http://localhost:3001/register/payment", JSON.parse(JSON.stringify(payload))).then((Response) => {
+        axios.post("https://innerve7-server.vercel.app/register/payment", JSON.parse(JSON.stringify(payload))).then((Response) => {
             console.log("Payment link sended via mail")
         });
         alert("Sent payment link");

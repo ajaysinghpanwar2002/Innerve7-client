@@ -27,7 +27,7 @@ function InputForm() {
     })
     const onSubmit = (data) => {
         console.log(data);
-        axios.post("http://localhost:3001/users", data).then((Response) => {
+        axios.post("https://innerve7-server.vercel.app/users", data).then((Response) => {
             console.log("it worked")
             alert("submitted")
         });

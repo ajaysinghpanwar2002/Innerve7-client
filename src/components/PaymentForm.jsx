@@ -40,7 +40,7 @@ function PaymentForm() {
         if (!error) {
             try {
                 const { id } = paymentMethod
-                const response = await axios.post("http://localhost:3001/payment", {
+                const response = await axios.post("https://innerve7-server.vercel.app/payment", {
                     amount: 1000,
                     id
                 })
