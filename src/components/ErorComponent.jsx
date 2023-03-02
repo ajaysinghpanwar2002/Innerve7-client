@@ -12,7 +12,7 @@ function ErorComponent() {
             background: '#f8f8f8'
         }}>
             <h1 style={{ fontSize: '2rem', textAlign: 'center' }}>
-                Sorry, we are currently unavailable.<br />Our developers are working hard to scale our system.<br />Please check back later.
+                Sorry, we are currently unavailable.<br />Our developers are working hard to scale our system.<br />Please refresh the page It works.<br/>REFRESH
             </h1>
         </div>
     )
