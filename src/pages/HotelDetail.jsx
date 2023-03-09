@@ -44,33 +44,33 @@ function HotelDetail() {
     }, [id])
 
     return (
-        <div>
-            {
-                loading ? <Loader /> : (
-                    <div>
-                        {Array.isArray(HotelDetailsData) && HotelDetailsData.length > 0 ? (
-                            <div>
-                                <HotelDetailsCard
-                                    id={HotelDetails?.location_id}
-                                    key={HotelDetails?.location_id}
-                                    name={HotelDetails?.name}
-                                    num_reviews={HotelDetails?.num_reviews}
-                                    timezone={HotelDetails?.timezone}
-                                    is_closed={HotelDetails?.is_closed}
-                                    price={HotelDetails?.price}
-                                    category={HotelDetails?.category?.name}
-                                    address={HotelDetails?.address}
-                                    phone={HotelDetails?.phone}
-                                    img={HotelDetails?.photo?.images?.original?.url || 'https://media-cdn.tripadvisor.com/media/photo-o/08/17/37/eb/concordia-guesthouse.jpg'}
-                                    available={HotelDetails?.hac_offers?.offers[0]?.is_bookable}
-                                    about={hotelStatus?.pricing_disclaimer}
-                                />
-                            </div>) : (<ErorComponent />)
-                        }
-                    </div>
-                )
-            }
-        </div>
+            <div>
+                {
+                    loading ? <Loader /> : (
+                        <div>
+                            {Array.isArray(HotelDetailsData) && HotelDetailsData.length > 0 ? (
+                                <div>
+                                    <HotelDetailsCard
+                                        id={HotelDetails?.location_id}
+                                        key={HotelDetails?.location_id}
+                                        name={HotelDetails?.name}
+                                        num_reviews={HotelDetails?.num_reviews}
+                                        timezone={HotelDetails?.timezone}
+                                        is_closed={HotelDetails?.is_closed}
+                                        price={HotelDetails?.price}
+                                        category={HotelDetails?.category?.name}
+                                        address={HotelDetails?.address}
+                                        phone={HotelDetails?.phone}
+                                        img={HotelDetails?.photo?.images?.original?.url || 'https://media-cdn.tripadvisor.com/media/photo-o/08/17/37/eb/concordia-guesthouse.jpg'}
+                                        available={HotelDetails?.hac_offers?.offers[0]?.is_bookable}
+                                        about={hotelStatus?.pricing_disclaimer}
+                                    />
+                                </div>) : (<ErorComponent />)
+                            }
+                        </div>
+                    )
+                }
+            </div>
     )
 }
 
